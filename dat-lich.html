@@ -15,7 +15,9 @@
 <meta property="og:url" content="https://tuananh-din.github.io/emotion-motion-web/dat-lich.html">
 <meta property="og:image" content="https://tuananh-din.github.io/emotion-motion-web/img/ig-6.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<style>[hidden]{display:none !important}</style>
+<style>[hidden]{display:none !important}header nav a{padding-block:14px}#em-form input:not([type=checkbox]),#em-form select{min-height:46px}@media (max-width:760px){[style*=" 10px/"],[style*=" 10.5px/"],[style*=" 11px/"]{font-size:12px !important}main a:not([class]),section a:not([class]),footer a{display:inline-flex;align-items:center;min-height:44px}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;1,300&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&amp;display=swap">
 <style>
 body{margin:0;background:#F5F0E8}
@@ -27,7 +29,7 @@ img{display:block;max-width:100%}
 .em-oval:hover{letter-spacing:.2em !important}
 .bk-field:focus{outline:none;border-bottom-color:#6B2620 !important;box-shadow:0 1px 0 #6B2620}
 .bk-chip:has(input:checked){border-color:#6B2620 !important;color:#6B2620}
-@media (max-width:860px){.st-nav,.st-lang{display:none !important}.st-home{display:inline-flex !important}}
+@media (max-width:860px){header > div{height:auto !important;min-height:64px}.st-nav{grid-column:1 / -1;grid-row:2;flex-wrap:wrap;justify-content:center;gap:0 10px !important}.st-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 6px}}
 @media (max-width:860px){.bk-grid{grid-template-columns:minmax(0,1fr) !important;padding-top:48px !important}.bk-aside{position:static !important}.bk-img{display:none !important}}
 @media (max-width:560px){.bk-two{grid-template-columns:minmax(0,1fr) !important}}
 @media (prefers-reduced-motion:reduce){.em-oval{transition:none}}
@@ -39,17 +41,14 @@ img{display:block;max-width:100%}
 <header id="top" style="position: sticky; top: 0; z-index: 30; background: #F5F0E8; border-bottom: 1px solid #CFC6B8;">
 <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); height: 64px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px;">
 <nav class="st-nav" aria-label="Menu chính" style="display: flex; gap: 22px; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase;">
-<a href="index.html" style="text-decoration: none;">Stories</a>
-<a href="index.html" style="text-decoration: none;">Films</a>
+<a href="index.html#stories" style="text-decoration: none;">Stories</a>
 <a href="quy-trinh.html" style="text-decoration: none;">Process</a>
 <a href="ve-chung-toi.html" style="text-decoration: none;">About</a>
 <a href="hoi-dap.html" style="text-decoration: none;">FAQ</a>
 </nav>
-<a class="st-home" href="index.html" style="display: none; align-items: center; min-height: 44px; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; text-decoration: none;">← Trang chủ</a>
-<a href="index.html" aria-label="Emotion&amp;Motion, về trang chủ" style="grid-column: 2; text-decoration: none; font-family: 'Noto Serif Display', 'Bodoni 72', Didot, serif; font-weight: 400; font-stretch: 62.5%; font-size: 32px; line-height: 1; letter-spacing: -.04em; color: #231F1C;">EM</a>
+<a href="index.html" aria-label="Emotion&amp;Motion, về trang chủ" style="grid-column: 2; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; text-decoration: none; font-family: 'Noto Serif Display', 'Bodoni 72', Didot, serif; font-weight: 400; font-stretch: 62.5%; font-size: 32px; line-height: 1; letter-spacing: -.04em; color: #231F1C;">EM</a>
 <div style="grid-column: 3; display: flex; justify-content: flex-end; align-items: center; gap: 18px;">
-<span class="st-lang" style="font: 400 11px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #6E655A;"><b style="font-weight: 500; color: #231F1C;">VI</b> / EN</span>
-<a class="em-oval" href="dat-lich.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 20px; border: 1px solid #6B2620; border-radius: 999px; background: #6B2620; color: #F5F0E8; text-decoration: none; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;">Đặt lịch</a>
+<a class="em-oval" href="dat-lich.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid #6B2620; border-radius: 999px; background: #6B2620; color: #F5F0E8; text-decoration: none; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;">Đặt lịch</a>
 </div>
 </div>
 </header>
@@ -76,7 +75,7 @@ img{display:block;max-width:100%}
 <section aria-label="Form đặt lịch" style="padding-top: 8px;">
 <div id="em-form-wrap">
 <form id="em-form" style="display: flex; flex-direction: column; gap: 30px;">
-<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;">
 <div class="bk-two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 32px;">
 <div><label for="bk-names" style="display: block; margin-bottom: 4px; font: 500 10.5px/1.4 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #6E655A;">Tên hai bạn *</label><input class="bk-field" id="bk-names" name="names" type="text" required autocomplete="off" placeholder="Ví dụ: Vy &amp; Tâm" style="width: 100%; padding: 8px 0; border: 0; border-bottom: 1px solid #6E655A; border-radius: 0; background: transparent; font: 300 19px/1.4 'Be Vietnam Pro', sans-serif; color: #231F1C;"></div>
 <div><label for="bk-phone" style="display: block; margin-bottom: 4px; font: 500 10.5px/1.4 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #6E655A;">Số điện thoại hoặc Zalo *</label><input class="bk-field" id="bk-phone" name="phone" type="tel" required autocomplete="off" placeholder="09xx xxx xxx" style="width: 100%; padding: 8px 0; border: 0; border-bottom: 1px solid #6E655A; border-radius: 0; background: transparent; font: 300 19px/1.4 'Be Vietnam Pro', sans-serif; color: #231F1C;"></div>
@@ -131,7 +130,7 @@ img{display:block;max-width:100%}
 <footer style="border-top: 1px solid #CFC6B8; padding: 24px clamp(16px, 4vw, 56px) 32px;">
 <div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; font: 400 11px/1.6 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #6E655A;">
 <span>© 2026 Emotion&amp;Motion</span>
-<span style="display: flex; flex-wrap: wrap; gap: 20px;"><a href="https://www.facebook.com/Emotionvnstudio">Facebook</a><a href="https://www.instagram.com/emotionandmotion_wedding/">Instagram</a><a href="index.html">Về trang chủ</a></span>
+<span style="display: flex; flex-wrap: wrap; gap: 4px 20px;"><a href="index.html">Trang chủ</a><a href="story-hm.html">Story H&amp;M</a><a href="quy-trinh.html">Quy trình</a><a href="ve-chung-toi.html">Về chúng tôi</a><a href="hoi-dap.html">Hỏi đáp</a><a href="dat-lich.html">Đặt lịch</a><a href="https://www.facebook.com/Emotionvnstudio">Facebook</a><a href="https://www.instagram.com/emotionandmotion_wedding/">Instagram</a></span>
 </div>
 </footer>
 
@@ -144,7 +143,7 @@ img{display:block;max-width:100%}
   var wrap = document.getElementById('em-form-wrap');
   var sent = document.getElementById('em-sent');
   var err = document.getElementById('em-error');
-  var ENDPOINT = 'https://formsubmit.co/ajax/leondinh.19@gmail.com';
+  var KEY = '';
   var LABELS = { names: 'Tên hai bạn', phone: 'Điện thoại hoặc Zalo', email: 'Email', date: 'Ngày cưới hoặc ngày chụp',
     service: 'Dịch vụ quan tâm', place: 'Nơi tổ chức hoặc nơi chụp', guests: 'Số khách dự kiến', budget: 'Ngân sách dự kiến',
     like: 'Điều thích ở ảnh', source: 'Biết đến qua', message: 'Lời nhắn' };
@@ -152,23 +151,25 @@ img{display:block;max-width:100%}
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (err) err.hidden = true;
-    if (!ENDPOINT) { done(); return; }
+    if (!KEY) {
+      if (err) { err.textContent = 'Form đang được cập nhật. Bạn nhắn Zalo 083 774 4254 để đặt lịch nhé.'; err.hidden = false; }
+      return;
+    }
     var btn = form.querySelector('[type="submit"]');
     var label = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Đang gửi...';
-    var data = {};
+    var data = { access_key: KEY, from_name: 'Website Emotion&Motion',
+      botcheck: !!(form.elements.botcheck && form.elements.botcheck.checked) };
     new FormData(form).forEach(function (v, k) {
-      if (k === '_honey') { data._honey = v; return; }
+      if (k === 'botcheck') return;
       var key = LABELS[k] || k;
       data[key] = data[key] ? data[key] + ', ' + v : v;
     });
-    data._subject = 'Đặt lịch mới từ website: ' + (form.elements.names ? form.elements.names.value : '');
-    data._template = 'table';
-    data._captcha = 'false';
-    if (form.elements.email && form.elements.email.value) data._replyto = form.elements.email.value;
+    data.subject = 'Đặt lịch mới từ website: ' + (form.elements.names ? form.elements.names.value : '');
+    if (form.elements.email && form.elements.email.value) data.replyto = form.elements.email.value;
     data['Trang gửi'] = location.pathname.split('/').pop() || 'index.html';
-    fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
       .then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (j) {
           if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || 'error');

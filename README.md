@@ -1,12 +1,34 @@
 # Emotion&Motion · Website
 
-Bản xem trước trang chủ website chụp ảnh cưới Emotion&Motion, chạy trên GitHub Pages.
+Website chụp ảnh cưới của Emotion&Motion, chạy trên GitHub Pages:
+https://tuananh-din.github.io/emotion-motion-web/
 
-- `index.html`: toàn bộ trang chủ, gồm chữ, màu, chuyển động và form đặt lịch mẫu.
-- `story-hm.html`: trang Story mẫu cho album cưới H&M, chia năm cảnh, bấm vào ảnh để xem lớn.
-- `dat-lich.html`, `quy-trinh.html`, `ve-chung-toi.html`, `hoi-dap.html`: Đặt lịch, Quy trình và chi phí, Về chúng tôi, Hỏi đáp.
-- `img/`: ảnh lấy từ các bài công khai trên Page Facebook của studio, đã nén cho web.
+## Bắt đầu trên máy mới
 
-Trang đang gắn thẻ `noindex` để Google không đưa vào kết quả tìm kiếm trong lúc còn là bản xem trước. Khi ra mắt thật, bỏ dòng `<meta name="robots" ...>` trong `index.html`.
+```bash
+git clone https://github.com/tuananh-din/emotion-motion-web.git C:/Work/emotion-motion-web
+cd C:/Work/emotion-motion-web
+python -m http.server 8765
+```
 
-Form đặt lịch ở trang chủ và trang Đặt lịch gửi về email của studio qua FormSubmit. Lần gửi đầu tiên cần bấm link kích hoạt trong thư FormSubmit gửi về.
+Mở http://127.0.0.1:8765/ để xem thử.
+
+**Sửa web bằng Claude Code:** mở thư mục này trong Claude Code. Claude tự đọc `CLAUDE.md`, nơi ghi đủ cấu trúc, cách sửa từng phần và cách đưa lên mạng.
+
+## Các trang
+
+| File | Trang |
+|---|---|
+| `index.html` | Trang chủ |
+| `story-hm.html` | Story album cưới H&M |
+| `dat-lich.html` | Đặt lịch |
+| `quy-trinh.html` | Quy trình và chi phí |
+| `ve-chung-toi.html` | Về chúng tôi |
+| `hoi-dap.html` | Hỏi đáp |
+
+## Ghi chú
+
+- Trang đang gắn thẻ `noindex` để Google chưa đưa vào kết quả tìm kiếm. Bỏ thẻ này khi ra mắt thật.
+- Form đặt lịch gửi về email qua Web3Forms, cần gắn access key. Xem `CLAUDE.md` mục 6.
+- Ảnh lấy từ các bài công khai trên Page Facebook của studio. Xin phép các cặp đôi trước khi ra mắt.
+- Kết quả soát giao diện: `docs/QC-giao-dien.md`.

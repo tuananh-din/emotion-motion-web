@@ -15,7 +15,9 @@
 <meta property="og:url" content="https://tuananh-din.github.io/emotion-motion-web/hoi-dap.html">
 <meta property="og:image" content="https://tuananh-din.github.io/emotion-motion-web/img/ig-1.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<style>[hidden]{display:none !important}</style>
+<style>[hidden]{display:none !important}header nav a{padding-block:14px}@media (max-width:760px){[style*=" 10px/"],[style*=" 10.5px/"],[style*=" 11px/"]{font-size:12px !important}main a:not([class]),section a:not([class]),footer a{display:inline-flex;align-items:center;min-height:44px}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;1,300&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&amp;display=swap">
 <style>
 body{margin:0;background:#F5F0E8}
@@ -30,7 +32,7 @@ img{display:block;max-width:100%}
 .fq summary:focus-visible{outline:2px solid #6B2620;outline-offset:4px}
 .fq-mark{transition:transform .3s ease}
 .fq[open] .fq-mark{transform:rotate(45deg)}
-@media (max-width:860px){.st-nav,.st-lang{display:none !important}.st-home{display:inline-flex !important}}
+@media (max-width:860px){header > div{height:auto !important;min-height:64px}.st-nav{grid-column:1 / -1;grid-row:2;flex-wrap:wrap;justify-content:center;gap:0 10px !important}.st-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 6px}}
 @media (max-width:860px){.fq-grid{grid-template-columns:minmax(0,1fr) !important;padding-top:48px !important}.fq-aside{position:static !important}.fq-img{display:none !important}}
 @media (prefers-reduced-motion:reduce){.em-oval,.fq-mark{transition:none}}
 </style>
@@ -41,17 +43,14 @@ img{display:block;max-width:100%}
 <header id="top" style="position: sticky; top: 0; z-index: 30; background: #F5F0E8; border-bottom: 1px solid #CFC6B8;">
 <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); height: 64px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px;">
 <nav class="st-nav" aria-label="Menu chính" style="display: flex; gap: 22px; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase;">
-<a href="index.html" style="text-decoration: none;">Stories</a>
-<a href="index.html" style="text-decoration: none;">Films</a>
+<a href="index.html#stories" style="text-decoration: none;">Stories</a>
 <a href="quy-trinh.html" style="text-decoration: none;">Process</a>
 <a href="ve-chung-toi.html" style="text-decoration: none;">About</a>
 <a href="hoi-dap.html" aria-current="page" style="text-decoration: none; color: #6B2620;">FAQ</a>
 </nav>
-<a class="st-home" href="index.html" style="display: none; align-items: center; min-height: 44px; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; text-decoration: none;">← Trang chủ</a>
-<a href="index.html" aria-label="Emotion&amp;Motion, về trang chủ" style="grid-column: 2; text-decoration: none; font-family: 'Noto Serif Display', 'Bodoni 72', Didot, serif; font-weight: 400; font-stretch: 62.5%; font-size: 32px; line-height: 1; letter-spacing: -.04em; color: #231F1C;">EM</a>
+<a href="index.html" aria-label="Emotion&amp;Motion, về trang chủ" style="grid-column: 2; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; text-decoration: none; font-family: 'Noto Serif Display', 'Bodoni 72', Didot, serif; font-weight: 400; font-stretch: 62.5%; font-size: 32px; line-height: 1; letter-spacing: -.04em; color: #231F1C;">EM</a>
 <div style="grid-column: 3; display: flex; justify-content: flex-end; align-items: center; gap: 18px;">
-<span class="st-lang" style="font: 400 11px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #6E655A;"><b style="font-weight: 500; color: #231F1C;">VI</b> / EN</span>
-<a class="em-oval" href="dat-lich.html" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 20px; border: 1px solid #6B2620; border-radius: 999px; color: #6B2620; text-decoration: none; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;">Đặt lịch</a>
+<a class="em-oval" href="dat-lich.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid #6B2620; border-radius: 999px; color: #6B2620; text-decoration: none; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;">Đặt lịch</a>
 </div>
 </div>
 </header>
@@ -116,7 +115,7 @@ img{display:block;max-width:100%}
 <footer style="border-top: 1px solid #CFC6B8; padding: 24px clamp(16px, 4vw, 56px) 32px;">
 <div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; font: 400 11px/1.6 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #6E655A;">
 <span>© 2026 Emotion&amp;Motion</span>
-<span style="display: flex; flex-wrap: wrap; gap: 20px;"><a href="https://www.facebook.com/Emotionvnstudio">Facebook</a><a href="https://www.instagram.com/emotionandmotion_wedding/">Instagram</a><a href="index.html">Về trang chủ</a></span>
+<span style="display: flex; flex-wrap: wrap; gap: 4px 20px;"><a href="index.html">Trang chủ</a><a href="story-hm.html">Story H&amp;M</a><a href="quy-trinh.html">Quy trình</a><a href="ve-chung-toi.html">Về chúng tôi</a><a href="hoi-dap.html">Hỏi đáp</a><a href="dat-lich.html">Đặt lịch</a><a href="https://www.facebook.com/Emotionvnstudio">Facebook</a><a href="https://www.instagram.com/emotionandmotion_wedding/">Instagram</a></span>
 </div>
 </footer>
 
