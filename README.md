@@ -9,4 +9,4 @@ Bản xem trước trang chủ website chụp ảnh cưới Emotion&Motion, ch�
 
 Trang đang gắn thẻ `noindex` để Google không đưa vào kết quả tìm kiếm trong lúc còn là bản xem trước. Khi ra mắt thật, bỏ dòng `<meta name="robots" ...>` trong `index.html`.
 
-Form đặt lịch hiện chỉ là bản mẫu và chưa gửi dữ liệu đi đâu.
+Form đặt lịch ở trang chủ và trang Đặt lịch gửi về email của studio qua FormSubmit. Lần gửi đầu tiên cần bấm link kích hoạt trong thư FormSubmit gửi về.

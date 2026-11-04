@@ -76,6 +76,7 @@ img{display:block;max-width:100%}
 <section aria-label="Form đặt lịch" style="padding-top: 8px;">
 <div id="em-form-wrap">
 <form id="em-form" style="display: flex; flex-direction: column; gap: 30px;">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
 <div class="bk-two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 32px;">
 <div><label for="bk-names" style="display: block; margin-bottom: 4px; font: 500 10.5px/1.4 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #6E655A;">Tên hai bạn *</label><input class="bk-field" id="bk-names" name="names" type="text" required autocomplete="off" placeholder="Ví dụ: Vy &amp; Tâm" style="width: 100%; padding: 8px 0; border: 0; border-bottom: 1px solid #6E655A; border-radius: 0; background: transparent; font: 300 19px/1.4 'Be Vietnam Pro', sans-serif; color: #231F1C;"></div>
 <div><label for="bk-phone" style="display: block; margin-bottom: 4px; font: 500 10.5px/1.4 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #6E655A;">Số điện thoại hoặc Zalo *</label><input class="bk-field" id="bk-phone" name="phone" type="tel" required autocomplete="off" placeholder="09xx xxx xxx" style="width: 100%; padding: 8px 0; border: 0; border-bottom: 1px solid #6E655A; border-radius: 0; background: transparent; font: 300 19px/1.4 'Be Vietnam Pro', sans-serif; color: #231F1C;"></div>
@@ -104,6 +105,7 @@ img{display:block;max-width:100%}
 <button type="submit" class="em-oval" style="min-height: 52px; padding: 0 32px; border: 1px solid #6B2620; border-radius: 999px; background: #6B2620; color: #F5F0E8; font: 500 11px/1 'Be Vietnam Pro', sans-serif; letter-spacing: .14em; text-transform: uppercase; cursor: pointer;">Gửi câu chuyện</button>
 <span style="font-size: 13px; color: #6E655A;">Dấu * là mục cần điền. Thông tin chỉ dùng để liên hệ tư vấn.</span>
 </div>
+<p id="em-error" role="alert" hidden style="margin: 0; font-size: 14px; color: #6B2620;">Chưa gửi được. Bạn thử lại sau ít phút hoặc nhắn Zalo 083 774 4254.</p>
 </form>
 </div>
 <div id="em-sent" hidden>
@@ -141,7 +143,41 @@ img{display:block;max-width:100%}
   if (!form) return;
   var wrap = document.getElementById('em-form-wrap');
   var sent = document.getElementById('em-sent');
-  form.addEventListener('submit', function (e) { e.preventDefault(); wrap.hidden = true; sent.hidden = false; sent.scrollIntoView({ block: 'center' }); });
+  var err = document.getElementById('em-error');
+  var ENDPOINT = 'https://formsubmit.co/ajax/leondinh.19@gmail.com';
+  var LABELS = { names: 'Tên hai bạn', phone: 'Điện thoại hoặc Zalo', email: 'Email', date: 'Ngày cưới hoặc ngày chụp',
+    service: 'Dịch vụ quan tâm', place: 'Nơi tổ chức hoặc nơi chụp', guests: 'Số khách dự kiến', budget: 'Ngân sách dự kiến',
+    like: 'Điều thích ở ảnh', source: 'Biết đến qua', message: 'Lời nhắn' };
+  function done() { wrap.hidden = true; sent.hidden = false; sent.scrollIntoView({ block: 'center' }); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (err) err.hidden = true;
+    if (!ENDPOINT) { done(); return; }
+    var btn = form.querySelector('[type="submit"]');
+    var label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Đang gửi...';
+    var data = {};
+    new FormData(form).forEach(function (v, k) {
+      if (k === '_honey') { data._honey = v; return; }
+      var key = LABELS[k] || k;
+      data[key] = data[key] ? data[key] + ', ' + v : v;
+    });
+    data._subject = 'Đặt lịch mới từ website: ' + (form.elements.names ? form.elements.names.value : '');
+    data._template = 'table';
+    data._captcha = 'false';
+    if (form.elements.email && form.elements.email.value) data._replyto = form.elements.email.value;
+    data['Trang gửi'] = location.pathname.split('/').pop() || 'index.html';
+    fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || 'error');
+        });
+      })
+      .then(done)
+      .catch(function () { if (err) err.hidden = false; })
+      .then(function () { btn.disabled = false; btn.textContent = label; });
+  });
   document.querySelectorAll('[data-reset]').forEach(function (b) {
     b.addEventListener('click', function () { form.reset(); sent.hidden = true; wrap.hidden = false; });
   });
